@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import ResultsItem from '../ResultsItems/ResultsItems';
+import './ResultsPanel.css';
 
 class ResultsPanel extends Component {
 
@@ -24,14 +26,9 @@ class ResultsPanel extends Component {
 
     render() {
         return (
-            <div>
+            <div className="resultsPanel">
                 { this.state.providers.map( (provider, i) => {
-                    return (
-                        <div key={i}>
-                            <a target="_blank" rel="noopener noreferrer" href={"https://voice123.com/"+provider.user.username}>{provider.user.name}</a>
-                            <img src={provider.user.picture_small} alt=""></img>
-                        </div>
-                    )
+                    return <ResultsItem provider={provider} key={i} />
                 }) }
             </div>
         );

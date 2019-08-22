@@ -1,0 +1,4 @@
+.resultsPanel {
+    display: flex;
+    flex-wrap: wrap;
+}
