@@ -1,7 +1,15 @@
 
 # Application set­up guide.
 
-
+- Clone project from [the repository](https://github.com/carlosbvz/voice123-test).
+- In the root folder run:
+```
+npm install
+```
+- Upon last step completion, run:
+```
+npm start
+```
 
 # Worklog. 
 
