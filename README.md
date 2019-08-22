@@ -18,6 +18,9 @@ profile page: VA profile link follows the next structure: https://voice123.com/{
 
 # Future improvements and recommendations.
 
+- Update Styles (Making it user friendly)
+- Updating audio file to actually play the audio
+- Complete highlighting logic
 
 # More information
 
