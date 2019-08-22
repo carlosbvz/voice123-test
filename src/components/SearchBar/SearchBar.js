@@ -1,25 +1,33 @@
 import React, { Component } from 'react';
+import './SearchBar.scss';
 
 class SearchBar extends Component {
 
-    // /?service=voice_over&keywords=search%20text?page=1
+    // &keywords=search%20text?page=1
 
     constructor(props) {
         super(props);
 
         this.search = this.search.bind(this);
+        this.handleInputUpdate = this.handleInputUpdate.bind(this);
 
         this.state = {
             apiUrl: props.apiUrl,
             page: props.page,
-            error: null
+            error: null,
+            keywords: ''
         }
+    }
+
+    handleInputUpdate(event) {
+        console.log(event.target.value)
+        this.setState({ keywords: event.target.value })
+        console.log(this.state.keywords)
     }
 
     search(e) {
         e.preventDefault();
-        console.log('searching...')
-        fetch( `${this.state.apiUrl}?page=${this.state.page || 1}` )
+        fetch( `${this.state.apiUrl}?service=voice_over&keywords=${this.state.keywords}&page=${this.state.page || 1}` )
             .then(res => res.json())
             .then(
                 (result) => {
@@ -38,14 +46,16 @@ class SearchBar extends Component {
     }
     render() {
         return (
-            <form className="searchForm" onSubmit={this.search}>
+            <form className="searchBar" onSubmit={this.search}>
                 <input
                     type="text"
-                    className="searchForm-input"
+                    className="searchBar-input"
                     placeholder="Type here what you are looking for..."
+                    value={this.state.keywords}
+                    onChange={this.handleInputUpdate}
                 />
 
-                <button className="searchForm-button">
+                <button className="searchBar-button">
                     Search
             </button>
             </form>

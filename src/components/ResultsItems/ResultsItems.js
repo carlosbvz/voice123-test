@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './ResultsItem.css';
+import './ResultsItem.scss';
 
 class ResultsItem extends Component {
 
@@ -15,9 +15,9 @@ class ResultsItem extends Component {
     render() {
         return (
             <div className="resultsItem" >
-                <a target="_blank" rel="noopener noreferrer" href={"https://voice123.com/"+this.state.provider.user.username}>{this.state.provider.user.name}</a>
                 <img src={this.state.provider.user.picture_small} alt=""></img>
-                <p>{this.state.provider.summary}</p>
+                <a target="_blank" rel="noopener noreferrer" href={"https://voice123.com/"+this.state.provider.user.username}>{this.state.provider.user.name}</a>
+                {/* <p>{this.state.provider.summary}</p> */}
                 <audio controls>
                     <source src={this.state.provider.relevant_sample.file} type="audio/mpeg" />
                     Your browser does not support the audio element.

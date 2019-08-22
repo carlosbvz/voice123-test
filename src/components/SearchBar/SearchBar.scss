@@ -1,0 +1,21 @@
+.searchBar {
+    display: flex;
+    justify-content: space-around;
+    
+
+    &-input {
+        width: 80%;
+        height: 20px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+    &-button {
+        height: 40px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 15%;
+        cursor: pointer;
+        background: aliceblue;
+    }
+}

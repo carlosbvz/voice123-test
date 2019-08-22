@@ -1,0 +1,36 @@
+.resultsItem {
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+
+    a {
+        margin: 0 auto;
+    }
+
+    audio {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    img {
+        width: 70%;
+        height: 200px;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    
+
+    @media (min-width: 768px) {
+        width: 25%;
+        img {
+            width: 80%;
+            height: 200px;
+            margin: 0 auto;
+        }
+    }
+}
