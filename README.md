@@ -1,3 +1,21 @@
+
+# Application set­up guide.
+
+# Worklog. 
+
+- [ ] The prototype/app must have a search input field and a search button. A query must be executed after either hit the enter key or click on the "search" button.
+- Show for every result:
+
+    - [ ] Voice Actor Name. It must be a link on a new Tab/Window to the Voice Actor
+profile page: VA profile link follows the next structure: https://voice123.com/{username}
+    - [ ] Voice Actor profile picture.
+    - [ ] The first paragraph that matches the search with the searched text highlighted.
+    - [ ] An audio player for listening to the relevant sample URL.
+    
+- [ ] Results page/component must have a results paginator.
+
+# Future improvements and recommendations.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
