@@ -14,9 +14,7 @@ class ResultsPanel extends Component {
     }
 
     componentWillReceiveProps(nextProps) {
-
         if(nextProps.resultItems.providers) {
-            console.log(nextProps.resultItems.providers)
             this.setState({
                     providers: nextProps.resultItems.providers,
             })

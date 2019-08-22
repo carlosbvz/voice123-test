@@ -12,37 +12,18 @@ class SearchBar extends Component {
         this.handleInputUpdate = this.handleInputUpdate.bind(this);
 
         this.state = {
-            apiUrl: props.apiUrl,
             page: props.page,
             error: null,
-            keywords: ''
         }
     }
 
     handleInputUpdate(event) {
-        console.log(event.target.value)
-        this.setState({ keywords: event.target.value })
-        console.log(this.state.keywords)
+        this.props.updateKeywords( event.target.value );
     }
 
     search(e) {
         e.preventDefault();
-        fetch( `${this.state.apiUrl}?service=voice_over&keywords=${this.state.keywords}&page=${this.state.page || 1}` )
-            .then(res => res.json())
-            .then(
-                (result) => {
-                    this.props.updateResultItems(result);
-                    this.setState({
-                        error: null
-                    });
-                },
-                (error) => {
-                    // TODO:   Handle error Here
-                    this.setState({
-                        error
-                    });
-                }
-            )
+        this.props.fetchData();
     }
     render() {
         return (
